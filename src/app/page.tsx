@@ -24,12 +24,14 @@ export default function Home() {
           <div className="text-4xl text-center font-extrabold text-gray-700 dark:text-white">
             Design Tools
           </div>
-          <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around">
+          <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around text-center">
             {DESIGN_TOOLS.map((item, idx) => {
               return (
                 <div key={idx} className="pt-2 text-gray-400 dark:text-gray-400">
-                  <div className="relative py-2">
-                    {renderIcon({ icon: item.icon })}
+                  <div className=" py-2 flex justify-center">
+                    <div>
+                      {renderIcon({ icon: item.icon })}
+                    </div>
                   </div>
                   <h3 className="text-black font-bold text-2xl">{item.proficiency}</h3>
                   <p className="mt-3">{item.title}</p>
