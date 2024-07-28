@@ -29,13 +29,12 @@ export function PopupWidget() {
     const whatsappMessage = `Hello, my name is ${data.name} \n. My email is ${data.email}. \nHere is my message: \n ${data.message}`;
     const whatsappURL = `https://wa.me/+971568611948?text=${encodeURIComponent(whatsappMessage)}`;
 
-    useEffect(() => {
-      if (whatsappURL) {
-        window.open(whatsappURL, "_blank");
-      }
-    }, [whatsappURL]);
   }
-
+  useEffect(() => {
+    if (whatsappURL) {
+      window.open(whatsappURL, "_blank");
+    }
+  }, [whatsappURL]);
   return (
     <div>
       <Disclosure>
