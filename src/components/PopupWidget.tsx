@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import {
   Disclosure,
@@ -28,13 +28,11 @@ export function PopupWidget() {
   const onSubmit = async (data: any, e: any) => {
     const whatsappMessage = `Hello, my name is ${data.name} \n. My email is ${data.email}. \nHere is my message: \n ${data.message}`;
     const whatsappURL = `https://wa.me/+971568611948?text=${encodeURIComponent(whatsappMessage)}`;
-
-  }
-  useEffect(() => {
-    if (whatsappURL) {
+    if (typeof window !== 'undefined') {
+      window.open(whatsappURL, "_blank");
 
     }
-  }, [whatsappURL]);
+  }
   return (
     <div>
       <Disclosure>
