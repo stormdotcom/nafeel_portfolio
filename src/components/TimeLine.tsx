@@ -1,5 +1,7 @@
+import dynamic from 'next/dynamic';
 import React from 'react';
-import { Chrono } from 'react-chrono';
+
+const Chrono = dynamic(() => import('react-chrono').then(mod => mod.Chrono), { ssr: false });
 
 interface TimelineEvent {
     title: string;
