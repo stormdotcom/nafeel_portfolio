@@ -20,9 +20,9 @@ const Timeline: React.FC<TimelineComponentProps> = ({ events }) => {
                 mode="VERTICAL"
                 theme={{
                     primary: "#6366F1",
-                    secondary: "#fffF",
+
                     cardBgColor: "white",
-                    cardForeColor: "black",
+                    cardForeColor: "#0000",
                     titleColor: "#374151"
                 }}
                 fontSizes={{
@@ -32,17 +32,22 @@ const Timeline: React.FC<TimelineComponentProps> = ({ events }) => {
                     title: '0.5rem',
                 }}
                 classNames={{
-                    card: 'my-card',
-                    cardMedia: 'my-card-media',
-                    cardSubTitle: 'my-card-subtitle',
+
+
+                    cardSubTitle: 'dark:text-gray-700 text-white',
                     cardText: 'my-card-text',
-                    cardTitle: 'my-card-title',
+                    cardTitle: 'dark:text-gray-700 text-white',
                     controls: 'hidden',
-                    title: 'text-lg',
+                    title: 'text-lg text-gray-700 dark:text-white',
                 }}
                 disableNavOnKey
                 hideControls
+                disableInteraction
+                enableDarkToggle
+                enableLayoutSwitch={false}
+                enableQuickJump={false}
                 cardHeight={100}
+                disableToolbar={true}
             />
         </div>
     );

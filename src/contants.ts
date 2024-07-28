@@ -11,7 +11,7 @@ export const navigation = [
     },
     {
         title: "Banners",
-        path: "/banners",
+        path: "#banners",
         reroute: true
     },
     {

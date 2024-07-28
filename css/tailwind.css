@@ -8,3 +8,12 @@
     @apply dark:bg-trueGray-900;
   }
 }
+
+
+.bg-card-light {
+  @apply bg-white;
+}
+
+.bg-card-dark {
+  @apply bg-gray-800;
+}

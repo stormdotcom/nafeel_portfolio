@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <Hero />
       <Container>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center" >
           <div className="text-4xl text-center font-extrabold text-gray-700 dark:text-white">
             Design Tools
           </div>
@@ -47,44 +47,54 @@ export default function Home() {
         preTitle="Nafeel"
         title=" Why should you use this landing page"
       >
-        Nafeel is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
       </SectionTitle>
 
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} /> */}
-        <Resume />
+        <div id="bio">
+          <Resume />
+        </div>
+        <div className="text-center mt-4">
+          <p className="text-lg font-bold  dark:text-white text-indigo-600">PORTFOLIO</p>
+          <h1 className="text-4xl font-bold text-gray-700 dark:text-white">My Work</h1>
+        </div>
+        <div>
 
-        <SectionTitle
-          title="Social Media Banners"
-          subTitle="Capture attention and boost engagement with sleek social media banners. Ideal for promoting your brand, events, and offers."
-        >
-        </SectionTitle>
+        </div>
+        <div id="banners">
+          <SectionTitle
+            title="Social Media Banners"
+            subTitle="Capture attention and boost engagement with sleek social media banners. Ideal for promoting your brand, events, and offers."
+          >
+          </SectionTitle>
 
-        {/* Printed*/}
-        <BannerImages />
-        <SectionTitle
-          title="Printed Media Banners"
-        >
-        </SectionTitle>
-        <PrintedMediaImages />
-
+          {/* Printed*/}
+          <BannerImages />
+          <SectionTitle
+            title="Printed Media Banners"
+          >
+          </SectionTitle>
+          <PrintedMediaImages />
+        </div>
 
         {/* UI-UX */}
-        <SectionTitle
-          title="UI/UX"
-        >
-        </SectionTitle>
-        <UIUx />
+        <div id="uiux">
+          <SectionTitle
+            title="UI/UX"
+          >
+          </SectionTitle>
+          <UIUx />
+        </div>
 
         {/* social Media Video Marketing */}
-        <SectionTitle
-          title="Social Media Video Marketing"
-        >
-        </SectionTitle>
-        <VideoList />
+        <div id="video">
+          <SectionTitle
+            title="Social Media Video Marketing" >
+          </SectionTitle>
+          <VideoList />
+        </div >
       </Container>
+
     </>
 
   );

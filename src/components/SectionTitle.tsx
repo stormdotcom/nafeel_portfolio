@@ -11,7 +11,7 @@ interface SectionTitleProps {
 export const SectionTitle = (props: Readonly<SectionTitleProps>) => {
   return (
     <Container
-      className={`flex w-full flex-col mt-6 ${props.align === "left" ? "" : "items-center justify-center text-center"
+      className={`flex w-full flex-col mt-6 ${props.align === "left" ? "" : "items-center justify-center text-center mt-4 mb-3"
         }`}>
       {props.title && (
         <div className="xs:text-sm text-4xl font-bold tracking-wider text-indigo-600 uppercase">
