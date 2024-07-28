@@ -3,14 +3,10 @@ import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
-import { PROJECT_CONFIG } from "@/contants";
+import { navigation, PROJECT_CONFIG } from "@/contants";
 
 export const Navbar = () => {
-  const navigation = [
-    "UI/UX",
-    "Posters",
-    "Blog",
-  ];
+  const resume = "/pdf/nafeel_resume.pdf";
 
   return (
     <div className="w-full">
@@ -21,7 +17,7 @@ export const Navbar = () => {
             <>
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                 <Link href="/">
-                  <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
+                  <span className="flex items-center space-x-2 text-2xl xs:text-sm font-medium text-indigo-500 dark:text-gray-100">
                     <span>
                       <Image
                         src="/img/logo.svg"
@@ -61,13 +57,10 @@ export const Navbar = () => {
                 <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
                   <>
                     {navigation.map((item, index) => (
-                      <Link key={index} href="/" className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
-                        {item}
+                      <Link key={index} href={item.path} className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
+                        {item.title}
                       </Link>
                     ))}
-                    <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5">
-                      Get Started
-                    </Link>
                   </>
                 </Disclosure.Panel>
               </div>
@@ -80,8 +73,8 @@ export const Navbar = () => {
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
-                <Link href="/" className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
-                  {menu}
+                <Link href={menu.path} className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
+                  {menu.title}
                 </Link>
               </li>
             ))}
@@ -89,10 +82,11 @@ export const Navbar = () => {
         </div>
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
-            Get Started
+          <Link href={resume} passHref>
+            <p className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5" >
+              Download Resume
+            </p>
           </Link>
-
           <ThemeChanger />
         </div>
       </nav>

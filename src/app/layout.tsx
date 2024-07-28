@@ -6,12 +6,13 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PopupWidget } from "@/components/PopupWidget";
+import { PROJECT_CONFIG } from "@/contants";
 
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nafeel's Portfolio",
+  title: PROJECT_CONFIG.TITLE,
   description: "Digital Marketing Enthusiast | SEO Analyst | UI UX Designer | PPC | Email Marketing",
 };
 
