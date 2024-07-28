@@ -25,14 +25,17 @@ export function Footer() {
                   height="32"
                   className="w-8"
                 />
-                <span>Nafeel</span>
+                <span>{PROJECT_CONFIG.TITLE}</span>
               </Link>
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Nafeel is a free landing page & marketing website template for
-              startups and indie projects. Its built with Next.js & TailwindCSS.
-              And its completely open-source.
+              Creative and motivated Digital Marketing enthusiast with
+              demonstrated experience in implementing new Marketing
+              plans and campaigns by conducting marketing research.
+              Energetic, quick learner, and team player. Passionate about
+              establishing a career in digital marketing
+
             </div>
 
           </div>
