@@ -60,4 +60,52 @@ export const DESIGN_TOOLS = [
     },
 ];
 
+const resume = {
+    Education: [
+        {
+            year: "2021-2022",
+            qualification: "PG Diploma In Digital Marketing",
+            institution: "Intellipaat (Belhaven University)"
+        },
+        {
+            year: "2014-2016",
+            qualification: "MBA",
+            institution: "Institute of Management in Kerala"
+        },
+        {
+            year: "2011-2014",
+            qualification: "B.Com",
+            institution: "St. Xaviers College, Trivandrum, Kerala"
+        }
+    ],
+    ProfessionalExperience: [
+        {
+            year: "2023-2024",
+            position: "Digital Marketing Specialist",
+            company: "Dr Ismail Healthcare Group"
+        },
+        {
+            year: "2022-2023",
+            position: "Digital Marketing Executive",
+            company: "VR Digitals"
+        },
+        {
+            year: "2021-2022",
+            position: "SEO Executive",
+            company: "Oracuz Info Tech"
+        }
+    ]
+};
+
+export const educationEvents = resume.Education.map(edu => ({
+    title: edu.year,
+    cardTitle: edu.qualification,
+    cardSubtitle: edu.institution,
+}));
+
+export const professionalEvents = resume.ProfessionalExperience.map(exp => ({
+    title: exp.year,
+    cardTitle: exp.position,
+    cardSubtitle: exp.company,
+}));
 

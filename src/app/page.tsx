@@ -13,6 +13,7 @@ import UIUx from "@/components/UIUx";
 import PrintedMediaImages from "@/components/PrintedMediaImages";
 import { DESIGN_TOOLS } from "@/contants";
 import { renderIcon } from "@/components/Icons";
+import Resume from "@/components/Resume";
 
 
 export default function Home() {
@@ -33,14 +34,12 @@ export default function Home() {
                       {renderIcon({ icon: item.icon })}
                     </div>
                   </div>
-                  <h3 className="text-black font-bold text-2xl">{item.proficiency}</h3>
+                  <h3 className="text-grey-600 font-bold text-2xl">{item.proficiency}</h3>
                   <p className="mt-3">{item.title}</p>
                 </div>
               )
             })}
           </div >
-
-
         </div>
       </Container>
       <Container>
@@ -55,8 +54,7 @@ export default function Home() {
 
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} /> */}
-
-
+        <Resume />
 
         <SectionTitle
           title="Social Media Banners"
