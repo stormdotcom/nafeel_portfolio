@@ -32,7 +32,7 @@ export function PopupWidget() {
   }
   useEffect(() => {
     if (whatsappURL) {
-      window.open(whatsappURL, "_blank");
+
     }
   }, [whatsappURL]);
   return (
