@@ -78,11 +78,12 @@ export default function Home() {
         </div>
 
         {/* UI-UX */}
-        <div id="uiux">
-          <SectionTitle
-            title="UI/UX"
-          >
-          </SectionTitle>
+
+        <SectionTitle
+          title="UI/UX"
+        >
+        </SectionTitle>
+        <div id="uiux" className="flex justify-evenly">
           <UIUx />
         </div>
 
