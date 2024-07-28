@@ -28,8 +28,8 @@ export function PopupWidget() {
     const whatsappMessage = `Hello, my name is ${data.name} \n. My email is ${data.email}. \nHere is my message: \n ${data.message}`;
     const whatsappURL = `https://wa.me/+971568611948?text=${encodeURIComponent(whatsappMessage)}`;
 
-    if (window) {
-      window?.open(whatsappURL, "_blank");
+    if (typeof window !== 'undefined') {
+      window.open(whatsappURL, "_blank");
     }
   };
 
