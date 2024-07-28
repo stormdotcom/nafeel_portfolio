@@ -25,32 +25,10 @@ export function PopupWidget() {
   const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
 
   const onSubmit = async (data: any, e: any) => {
-    console.log(data);
-    await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(data, null, 2),
-    })
-      .then(async (response) => {
-        let json = await response.json();
-        if (json.success) {
-          setIsSuccess(true);
-          setMessage(json.message);
-          e.target.reset();
-          reset();
-        } else {
-          setIsSuccess(false);
-          setMessage(json.message);
-        }
-      })
-      .catch((error) => {
-        setIsSuccess(false);
-        setMessage("Client Error. Please check the console.log for more info");
-        console.log(error);
-      });
+    const whatsappMessage = `Hello, my name is ${data.name} \n. My email is ${data.email}. \nHere is my message: \n ${data.message}`;
+    const whatsappURL = `https://wa.me/+971568611948?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(whatsappURL, "_blank");
   };
 
   return (
@@ -119,9 +97,9 @@ export function PopupWidget() {
             >
               <DisclosurePanel className=" flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
                 <div className="flex flex-col items-center justify-center h-32 p-5 bg-indigo-600">
-                  <h3 className="text-lg text-white">How can we help?</h3>
+                  <h3 className="text-lg text-white">Get in Touch</h3>
                   <p className="text-white opacity-50">
-                    We usually respond in a few hours
+                    I usually respond in a few hours
                   </p>
                 </div>
                 <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 ">
@@ -165,8 +143,8 @@ export function PopupWidget() {
                             maxLength: 80,
                           })}
                           className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${errors.name
-                              ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
+                            ? "border-red-600 focus:border-red-600 ring-red-100"
+                            : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
                             }`}
                         />
                         {errors.name && (
@@ -195,8 +173,8 @@ export function PopupWidget() {
                           })}
                           placeholder="you@company.com"
                           className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${errors.email
-                              ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
+                            ? "border-red-600 focus:border-red-600 ring-red-100"
+                            : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
                             }`}
                         />
 
@@ -223,8 +201,8 @@ export function PopupWidget() {
                           })}
                           placeholder="Your Message"
                           className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md h-28 focus:outline-none focus:ring   ${errors.message
-                              ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
+                            ? "border-red-600 focus:border-red-600 ring-red-100"
+                            : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
                             }`}
                           required
                         ></textarea>
