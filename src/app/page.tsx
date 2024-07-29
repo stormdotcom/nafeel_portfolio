@@ -25,10 +25,10 @@ export default function Home() {
           <div className="text-4xl text-center font-extrabold text-gray-700 dark:text-white">
             Design Tools
           </div>
-          <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around text-center">
+          <div className="flex flex-wrap justify-center gap-5 mt-10 text-center">
             {DESIGN_TOOLS.map((item, idx) => {
               return (
-                <div key={idx} className="pt-2 text-gray-400 dark:text-gray-400">
+                <div key={idx} className="pt-2 text-gray-400 dark:text-gray-400 w-full sm:w-1/2 md:w-1/6">
                   <div className=" py-2 flex justify-center">
                     <div>
                       {renderIcon({ icon: item.icon })}

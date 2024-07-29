@@ -12,10 +12,10 @@ export const Hero = () => {
               DIGITAL MARKETING
               SPECIALIST
             </h1>
-            <h6 className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
+            <h6 className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300 xs:text-md">
               SEO Analyst | UI UX Designer | PPC | Email Marketing
             </h6>
-            <div className="flex flex-col items-center justify-around mb-3 space-y-3 md:space-y-0 md:flex-row md:space-x-6">
+            <div className="flex flex-col sm:flex-row items-center justify-around mb-3 space-y-3 md:space-y-0 md:flex-row md:space-x-6">
               <div className="flex items-center space-x-2">
                 <EnvelopeIcon className="h-5 w-5 text-indigo-500" />
                 <p className="text-gray-700 dark:text-white font-bold">nafeeln2211@gmail.com</p>
