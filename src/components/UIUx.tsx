@@ -6,7 +6,7 @@ import image3 from "../../public/img/hero_page.jpg"
 
 const UIUx = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4 justify-items-center">
             <div className="relative w-[200px] h-screen overflow-hidden rounded-2xl bg-gray-100">
                 <Image src={image1} alt="Image_1" width={200} placeholder="blur" quality={100} priority />
             </div>

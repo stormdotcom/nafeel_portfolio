@@ -83,7 +83,7 @@ export default function Home() {
           title="UI/UX"
         >
         </SectionTitle>
-        <div id="uiux" className="flex justify-evenly">
+        <div id="uiux">
           <UIUx />
         </div>
 
