@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
 import { PROJECT_CONFIG } from "@/contants";
+import AdSenseAd from "./AdSense";
 
 export function Footer() {
   const navigation = [""];
@@ -11,6 +12,7 @@ export function Footer() {
     <div className="relative">
       <Container>
         <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
+
           <div className="lg:col-span-2">
             <div>
               {" "}
@@ -39,7 +41,7 @@ export function Footer() {
             </div>
 
           </div>
-
+          <AdSenseAd />
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {navigation.map((item, index) => (
