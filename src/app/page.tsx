@@ -14,9 +14,15 @@ import PrintedMediaImages from "@/components/PrintedMediaImages";
 import { DESIGN_TOOLS } from "@/contants";
 import { renderIcon } from "@/components/Icons";
 import Resume from "@/components/Resume";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: 'Nafeel Nazumudeen | Professional UI/UX Designer in Dubai, UAE',
+  description: 'Showcasing expertise in SEO, UI/UX design, and web development in Dubai, UAE.',
+  keywords: ['SEO UAE', 'UI UX Dubai', 'Web Development UAE', 'Portfolio'],
+};
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <Hero />
