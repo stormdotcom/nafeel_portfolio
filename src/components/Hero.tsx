@@ -59,7 +59,7 @@ export const Hero = () => {
               width="616"
               height="617"
               className={"object-cover"}
-              alt="Hero Illustration"
+              alt="SEO Analyst at UAE | Dubai"
               loading="eager"
               placeholder="blur"
             />
