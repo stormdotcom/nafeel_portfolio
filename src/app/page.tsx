@@ -17,7 +17,7 @@ import Resume from "@/components/Resume";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Nafeel Nazumudeen | Professional UI/UX Designer in Dubai, UAE',
+  title: 'Nafeel Nazumudeen | Professional UI/UX Designer/ SEO Analyst in Dubai, UAE',
   description: 'Showcasing expertise in SEO, UI/UX design, and web development in Dubai, UAE.',
   keywords: ['SEO UAE', 'UI UX Dubai', 'Web Development UAE', 'Portfolio'],
 };

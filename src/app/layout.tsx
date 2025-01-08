@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: PROJECT_CONFIG.TITLE,
-  description: "Digital Marketing Enthusiast | SEO Analyst | UI UX Designer | PPC | Email Marketing",
+  description: "Digital Marketing Enthusiast | SEO Analyst | UI UX Designer | PPC | Email Marketing | Dubai | UAE",
 };
 
 export default function RootLayout({
